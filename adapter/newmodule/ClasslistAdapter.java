@@ -13,9 +13,9 @@ import java.util.Iterator;
  * can use Classlist from newmodule, which (secretly) calls ClasslistAdapter to
  * connect with the Classlist from oldmodule.
  *
- * <p>
- * Target = Classlist (newmodule) Adapter = ClasslistAdapter Adaptee = Classlist
- * (oldmodule)
+ * <p>Target = Classlist (newmodule)
+ * Adapter = ClasslistAdapter
+ * Adaptee = Classlist (oldmodule)
  */
 public class ClasslistAdapter implements adapter.newmodule.Classlist {
   private Classlist classlist;
