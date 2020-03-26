@@ -1,0 +1,95 @@
+Autotested Results for E3 submitted by Michael Liu (michael-mml)
+Generated at 2020-03-25T20:45:48
+
+Summary of Results: 16 out of 19 tests successfully passed
+--
+
+Tests for testexam.testadapter.AdapterFunctionTest (8/10 passed)
+--
+
+1) testing getSession                                                                 .. ok!
+2) testing addGetStudent one                                                          .. ok!
+3) testing with 2 iterators: different instances                                      .. ok!
+4) testing addGetStudent two                                                          .. ok!
+5) testing with 2 iterators: different instances                                      .. ok!
+6) testing getCourseName                                                              .. ok!
+7) testing addGetStudent four                                                         .. ok!
+8) testing with 2 iterators: different instances                                      .. ok!
+9) testing getCourseNumber                                                            .. failed
+.. because Error in getCourseNumber. expected:<TestN[umber]> but was:<TestN[ame]> (details below):
+
+    org.junit.ComparisonFailure: Error in getCourseNumber. expected:<TestN[umber]> but was:<TestN[ame]>
+    	at org.junit.Assert.assertEquals(Assert.java:115)
+    	at testexam.testadapter.AdapterFunctionTest.testGetCourseNumber(AdapterFunctionTest.java:58)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+    	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+    	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+10) testing with 2 iterators: same elements                                            .. failed
+.. because Error in iterators. expected:<adapter.oldmodule.UofTStudent@770c374b> but was:<adapter.oldmodule.UofTStudent@79cbc7da> (details below):
+
+    java.lang.AssertionError: Error in iterators. expected:<adapter.oldmodule.UofTStudent@770c374b> but was:<adapter.oldmodule.UofTStudent@79cbc7da>
+    	at org.junit.Assert.fail(Assert.java:88)
+    	at org.junit.Assert.failNotEquals(Assert.java:834)
+    	at org.junit.Assert.assertEquals(Assert.java:118)
+    	at testexam.testadapter.AdapterFunctionTest.testIteratorsSameElements(AdapterFunctionTest.java:142)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+    	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+    	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+
+
+Tests for testexam.testadapter.AdapterReflectionTest (8/9 passed)
+--
+
+1) testing signature addStudent                                                       .. ok!
+2) testing signature of getCourseName                                                 .. ok!
+3) testing usage of Classlist                                                         .. ok!
+4) testing constructor                                                                .. ok!
+5) testing class declaration                                                          .. ok!
+6) testing signature of getStudents                                                   .. ok!
+7) testing signature of getSession                                                    .. ok!
+8) testing signature of getCourseNumber                                               .. ok!
+9) testing usage of Enumeration                                                       .. failed
+.. because adapter.newmodule.ClasslistAdapter$1$1 should have a field of type java.util.Enumeration (details below):
+
+    java.lang.AssertionError: adapter.newmodule.ClasslistAdapter$1$1 should have a field of type java.util.Enumeration
+    	at org.junit.Assert.fail(Assert.java:88)
+    	at testexam.SharedTest.shouldContainField(SharedTest.java:100)
+    	at testexam.testadapter.AdapterReflectionTest.testReflectionEnumeration(AdapterReflectionTest.java:117)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+    	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+    	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+    	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+    	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+    	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+    	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+
+
